@@ -21,6 +21,8 @@ jobs:
       pull-requests: write
 
     steps:
+    - name : resources
+      run: ls -lart
     - uses: actions/labeler@v4
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
