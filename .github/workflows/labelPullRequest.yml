@@ -22,7 +22,9 @@ jobs:
 
     steps:
     - name : resources
-      run: ls -lart
+      run: | 
+          ls -lart
+          echo " this is the pull request number ${{github.event.number}}"
     - uses: actions/labeler@v4
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
